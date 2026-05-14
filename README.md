@@ -1,66 +1,87 @@
-# IA Project 2 - Discount Recommendation POC
+# IA Project 2 — Discount Recommendation POC
 
-This project is a small proof of concept for an AI-assisted discount recommendation system for a supplement brand.
+This project is a Proof of Concept (POC) for an AI-assisted discount recommendation system for a supplement brand.
 
-## Goal
+The main objective is to help the company decide when it makes sense to offer discounts to customers in order to maximize customer acquisition and retention while avoiding unnecessary discounts for already loyal customers.
 
-Recommend whether a customer should receive no discount, a small discount, or a larger discount based on simple customer features and synthetic data.
+---
 
-## Suggested structure
+# Project Goal
 
-- `data/` - synthetic datasets and generated CSV files
-- `models/` - trained model artifacts
-- `notebooks/` - exploration and experimentation
-- `src/` - data generation, training, and utility code
-- `app/` - web app for the demo
-- `docs/` - presentation notes and supporting material
+Develop a machine learning model capable of recommending:
 
+- No discount
+- Small discount
+- Large discount
 
+based on customer behavior and purchase patterns using synthetic data.
 
-## Biblioteca mas adequeada a ser utilizada
-scikit-learn (SKLearn) -> para o modelo 
-Streamlit -> para a web app
+---
 
-## Modelo recomendado:
+# Problem Description
 
+Many supplement and fitness brands apply generic discounts to all customers, reducing profit margins unnecessarily.
 
-Decision Tree ou Random Forest
+This project proposes an intelligent system capable of identifying:
+- loyal customers who likely do not require discounts,
+- new customers who may need incentives,
+- inactive customers who may benefit from retention campaigns.
 
+The goal is to optimize discount allocation through Machine Learning.
 
+---
 
-## Next steps
+# Final Product (B2B — Business-to-Business)
 
-1. Generate synthetic customer data.
-2. Train a simple classification model.
-3. Build a small web app to show the recommendation.
-4. Prepare the presentation slides.
+The final product will be a web application designed for internal company use.
 
+The application helps the supplement company answer the question:
 
-## Produto final:
-Uma web app para a empresa de suplementos, ou seja, uma ferramenta usada pela empresa
+> "Should we offer a discount to this customer?"
 
+---
 
-omo funcionaria na prática
-Cenário
+# How the System Works
 
-A empresa quer decidir:
+## Customer Information (Inputs)
 
-“Devemos dar desconto a este cliente?”
+The user inserts customer-related information such as:
 
-Então a aplicação teria algo como:
+- Number of purchases per year
+- Average spending
+- Months since last purchase
+- New customer status
+- Purchase frequency
 
-Informação do Cliente
-Compras por ano
-Valor médio gasto
-Última compra
-Cliente novo?
+---
 
-Depois carregam em:
+## AI Recommendation (Outputs)
 
-“Analisar Cliente”
+After analyzing the customer, the system provides:
 
-E o sistema responde:
+- Recommended discount percentage
+- Customer classification
+- Customer retention probability
+- Risk of customer abandonment
 
-“Desconto recomendado: 10%”
-“Probabilidade de retenção: alta”
-“Cliente em risco de abandono”
+---
+
+# Example Workflow
+
+## Input
+
+| Feature | Example |
+|---|---|
+| Purchases per year | 2 |
+| Average spending | 35€ |
+| Months since last purchase | 4 |
+| New customer | Yes |
+
+---
+
+## Output
+
+```text
+Recommended Discount: 15%
+Retention Probability: High
+Customer Risk Level: Medium
