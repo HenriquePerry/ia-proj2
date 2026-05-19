@@ -4,9 +4,9 @@ from __future__ import annotations
 
 
 DISCOUNT_LABELS = {
-    0: "No discount",
-    1: "Small discount",
-    2: "Large discount",
+    0:  "No Discount",
+    10: "Small Discount",
+    15: "Large Discount",
 }
 
 
